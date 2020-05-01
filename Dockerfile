@@ -11,6 +11,9 @@ COPY package*.json ./
 # Install dependencies
 RUN npm install
 
+ARG FAVORITE_FOOD
+ENV FAVORITE_FOOD=${FAVORITE_FOOD}
+
 # Copy app source
 COPY . .
 
